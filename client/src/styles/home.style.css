@@ -1,0 +1,39 @@
+body.home{
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.homeSection{
+  margin-top: 2%;
+  margin-left: 2%;
+  width:70%;
+}
+
+.asideSection{
+  margin-top: 2%;
+  margin-left: 2%;
+  width:30%;
+}
+
+@media screen and (max-width: 1000px) {
+  body.home{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  
+  .homeSection{
+    margin-top: 2%;
+    width:95vw;
+  }
+  
+  .asideSection{
+    margin-top: 2%;
+    width:95vw;
+  }
+}
