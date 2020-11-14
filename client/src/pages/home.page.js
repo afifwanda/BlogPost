@@ -1,11 +1,22 @@
 import React from 'react';
+import Navbar from '../components/navbar.component';
+
+import '../styles/home.style.css'
 
 function Home(){
   
   return(
-    <div>
-      This is Homepage
-    </div>
+    <>
+    <Navbar />
+    <body className='home'>
+      <section className='homeSection'>
+        tes
+      </section>
+      <aside className='asideSection'>
+        Tes
+      </aside>
+    </body>
+    </>
   )
 }
 
