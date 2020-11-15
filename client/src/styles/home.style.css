@@ -3,13 +3,23 @@
   --black: #333333;
 }
 
+.comment-box input:invalid,
+.comment-box textarea:invalid {
+  border: 2px solid#FF5F2D;
+}
+
+.comment-box input:valid,
+.comment-box textarea:valid {
+  border: 2px solid #33B95A;
+}
+
 h1{
-  font-family: 'PT-Bold';
-  font-size: 2rem;
+  font-family: 'PT-Bold','Arial';
+  font-size: 1.6rem;
 }
 
 h2{
-  font-family: 'PT-Bold';
+  font-family: 'PT-Bold','Arial';
   font-size: 1.4rem;
 }
 
@@ -29,7 +39,7 @@ p{
 
 body.home{
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 80vw;
   display: flex;
   flex-direction: row;
   background-color: white;
@@ -70,13 +80,14 @@ body.home{
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
 .horizontal-line{
   border-top: 2px solid var(--light-grey);
   margin-top: 1%;
-  width: 100%;
+  min-width: 65%;
 }
 
 .replies-container{
@@ -84,13 +95,20 @@ body.home{
   margin-top: 20px;
 }
 
-/* new component */
+.asideSection{
+  margin-top: 2%;
+  margin-left: 2%;
+  width:30%;
+}
+
+/* new component comment */
 
 .comment{
   width: 95%;
   height: 120px;
   display: flex;
   flex-direction: row;
+  font-family: 'PT-Regular';
 }
 
 .avatar{
@@ -113,8 +131,9 @@ body.home{
 }
 
 .user{
-  font-family: 'PT-Bold';
+  font-family: 'PT-Bold','Arial';
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .comment-date{
@@ -130,18 +149,83 @@ body.home{
 .point-box{
   display: flex;
   flex-direction: row;
-  width: 150px;
+  width: 120px;
   justify-content: space-between;
+  align-items: center;
 }
 
-
-
-
-.asideSection{
-  margin-top: 2%;
-  margin-left: 2%;
-  width:30%;
+.upvote:hover{
+  color: white;
+  background-color: #33B95A;
+  transition: all 0.5s ease;
 }
+
+.downvote:hover{
+  color: white;
+  background-color: #635C53;
+  transition: all 0.5s ease;
+}
+
+.vote-box{
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DDDDDD;
+}
+
+/* new component comment form */
+
+.comment-box{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.comment-box p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #FF5F2D
+}
+
+.input-box{
+  height: 30px;
+  margin-top: 5px;
+  width: 40%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.text-area{
+  margin-top: 5px;
+  height: 100px;
+  width: 80%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.button-box{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+button{
+  width: 70px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: var(--light-grey);
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: var(--black);
+  color: white;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
 
 @media screen and (max-width: 1000px) {
   body.home{
