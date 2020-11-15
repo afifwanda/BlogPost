@@ -62,7 +62,7 @@ body.home{
   font-family: 'PT-Regular','Arial';
 }
 
-.comments-title{
+.section-title{
   margin-top: 20px;
 }
 
@@ -79,12 +79,16 @@ body.home{
   width: 100%;
 }
 
+.replies-container{
+  margin-left: 5%;
+  margin-top: 20px;
+}
+
 /* new component */
 
 .comment{
   width: 95%;
   height: 120px;
-  background-color: aqua;
   display: flex;
   flex-direction: row;
 }
@@ -92,10 +96,14 @@ body.home{
 .avatar{
   width: 60px;
   height: 60px;
-  background-color: coral;
-  margin-left: 10px;
+  margin-left: 15px;
   margin-top: 10px;
   margin-right: 15px;
+}
+
+.comment-image{
+  width: 100%;
+  height: 100%;
 }
 
 .comment-content{
@@ -122,9 +130,8 @@ body.home{
 .point-box{
   display: flex;
   flex-direction: row;
-  width: 25%;
-  justify-content: space-around;
-  background-color: cadetblue;
+  width: 150px;
+  justify-content: space-between;
 }
 
 
@@ -146,12 +153,38 @@ body.home{
   }
   
   .homeSection{
+    margin-left: 2%;
     margin-top: 2%;
-    width:95vw;
+    width:100vw;
+    border-right: 0;
+    border-bottom: 2px solid var(--light-grey);
+    padding-bottom: 10px;
   }
   
   .asideSection{
     margin-top: 2%;
     width:95vw;
+  }
+
+  .section-title{
+    margin-top: 20px;
+  }
+  
+  .title-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .horizontal-line{
+    border-top: 0;
+    margin-top: 1%;
+    width: 0vw;
+  }
+
+  .replies-container{
+    margin-left: 5%;
+    margin-top: 20px;
   }
 }

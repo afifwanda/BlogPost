@@ -1,9 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Navbar from '../components/navbar.component';
+import Comment from '../components/comment.component';
+import {useDispatch,useSelector} from 'react-redux';
+import {getData} from '../store/action.js';
 
-import '../styles/home.style.css'
+import '../styles/home.style.css';
 
 function Home(){
+
+  const dispatch = useDispatch()
+
+  useEffect(()=>{
+    dispatch(getData())
+  },[dispatch])
+
+  const listComment = useSelector(state=>state.reducer.comments)
+  console.log(listComment,'ini comment')
 
   const title = [
     'Ipsum voluptate voluptate ipsum',
@@ -26,26 +38,38 @@ function Home(){
             sint consectetur culpa voluptate minim nostrud.
           </p>
         </div>
-        <div className='comments-title'>
+        <div className='section-title'>
           <div className='title-box'>
             <h1>Komentar</h1>
             <div className='horizontal-line' />
           </div>
         </div>
-        <div className='comment'>
-          <div className='avatar'></div>
-          <div className='comment-content'>
-            <div className='user'>Monica Gatzambide</div>
-            <div className='comment-date'>12 Jan 1990</div>
-            <div className='content'>Culpa quis ipsum eu dolor tempor duis ea sunt fugiat commodo ipsum.
-            Nisi cillum commodo excepteur quis fugiat sint sint adipisicing culpa dolor aliqua.</div>
-            <div className='point-box'>
-              <div className='point'>4 Point</div>
-              <div className='upvote'>UP</div>
-              <div className='downvote'>Down</div>
-            </div>
-          </div>
-        </div>
+        {
+          listComment.map(element => {
+            return ( <>
+              <Comment
+              key = {element.id}
+              author = {element.author}
+              avatar = {element.avatar}
+              date = {element.date}
+              message = {element.message}
+              point = {element.point}
+              />
+                { element.replies.map(replies => 
+                <div className='replies-container'>
+                  <Comment
+                  key = {replies.id}
+                  author = {replies.author}
+                  avatar = {replies.avatar}
+                  date = {replies.date}
+                  message = {replies.message}
+                  point = {replies.point}
+                  />
+                </div>)}
+              </>
+            )
+          })
+        }
       </section>
       <aside className='asideSection'>
         <h2>Diskusi 5 Teratas</h2>
