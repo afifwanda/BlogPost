@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import Navbar from '../components/navbar.component';
 import Comment from '../components/comment.component';
+import CommentForm from '../components/commentForm.component';
 import {useDispatch,useSelector} from 'react-redux';
 import {getData} from '../store/action.js';
 
@@ -70,6 +71,13 @@ function Home(){
             )
           })
         }
+        <div className='section-title'>
+          <div className='title-box'>
+            <h1>Tambahkan Komentar</h1>
+            <div className='horizontal-line' />
+          </div>
+        </div>
+        <CommentForm />
       </section>
       <aside className='asideSection'>
         <h2>Diskusi 5 Teratas</h2>

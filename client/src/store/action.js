@@ -13,3 +13,31 @@ export const getData = () => {
     })
   }
 }
+
+export const updateData = (id,author,avatar,date,message,point,replies) =>{
+  const obj = {
+    "id": id,
+    "author": author,
+    "avatar": avatar,
+    "date": date,
+    "message": message,
+    "point": point,
+    "replies": replies
+  }
+  return async dispatch => {
+    const result = await fetch(`${baseUrl}comments/${id}`,{
+      method: "PUT",
+      headers: {
+        Accept: 'application/json',
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify(obj)
+    })
+    dispatch({
+      type: 'EDIT_CONTACT',
+      payload:{
+        editedContact : obj
+      }
+    })
+  }
+}
