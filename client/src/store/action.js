@@ -24,6 +24,7 @@ export const updateData = (id,author,avatar,date,message,point,replies) =>{
     "point": point,
     "replies": replies
   }
+  console.log(obj)
   return async dispatch => {
     const result = await fetch(`${baseUrl}comments/${id}`,{
       method: "PUT",
@@ -34,9 +35,9 @@ export const updateData = (id,author,avatar,date,message,point,replies) =>{
       body: JSON.stringify(obj)
     })
     dispatch({
-      type: 'EDIT_CONTACT',
+      type: 'EDIT_VOTE',
       payload:{
-        editedContact : obj
+        editedVote : [obj]
       }
     })
   }

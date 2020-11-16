@@ -50,21 +50,25 @@ function Home(){
             return ( <>
               <Comment
               key = {element.id}
+              id = {element.id}
               author = {element.author}
               avatar = {element.avatar}
               date = {element.date}
               message = {element.message}
               point = {element.point}
+              replies = {element.replies}
               />
                 { element.replies.map(replies => 
                 <div className='replies-container'>
                   <Comment
                   key = {replies.id}
+                  id = {replies.id}
                   author = {replies.author}
                   avatar = {replies.avatar}
                   date = {replies.date}
                   message = {replies.message}
                   point = {replies.point}
+                  replies = {replies.replies}
                   />
                 </div>)}
               </>

@@ -154,6 +154,26 @@ body.home{
   align-items: center;
 }
 
+.upvote{
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #33B95A;
+}
+
+.downvote{
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #635C53;
+}
+
 .upvote:hover{
   color: white;
   background-color: #33B95A;
@@ -173,6 +193,11 @@ body.home{
   justify-content: center;
   align-items: center;
   background-color: #DDDDDD;
+}
+
+.vote-box.upVoteDone{
+  color: white;
+  background-color: #33B95A;
 }
 
 /* new component comment form */
