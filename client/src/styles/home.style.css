@@ -1,0 +1,299 @@
+:root {
+  --light-grey: #EEEEEE;
+  --black: #333333;
+}
+
+.comment-box input:invalid,
+.comment-box textarea:invalid {
+  border: 2px solid#FF5F2D;
+}
+
+.comment-box input:valid,
+.comment-box textarea:valid {
+  border: 2px solid #33B95A;
+}
+
+h1{
+  font-family: 'PT-Bold','Arial';
+  font-size: 1.6rem;
+}
+
+h2{
+  font-family: 'PT-Bold','Arial';
+  font-size: 1.4rem;
+}
+
+h3{
+  font-family: 'PT-Regular','Arial';
+  font-size: 1rem;
+  text-align: left;
+}
+
+p{
+  font-family: 'PT-Regular','Segoe UI';
+  margin-top: 20px;
+  width: 90%;
+  text-align: justify;
+}
+
+
+body.home{
+  min-height: 100vh;
+  min-width: 80vw;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.homeSection{
+  margin-left: 2%;
+  margin-top: 2%;
+  width:70%;
+  border-right: 2px solid var(--light-grey);
+}
+
+.title-dummy{
+  margin-top: 20px;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.number-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  background-color: var(--black);
+  color:white;
+  font-family: 'PT-Regular','Arial';
+}
+
+.section-title{
+  margin-top: 20px;
+}
+
+.title-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.horizontal-line{
+  border-top: 2px solid var(--light-grey);
+  margin-top: 1%;
+  min-width: 65%;
+}
+
+.replies-container{
+  margin-left: 5%;
+  margin-top: 20px;
+}
+
+.asideSection{
+  margin-top: 2%;
+  margin-left: 2%;
+  width:30%;
+}
+
+/* new component comment */
+
+.comment{
+  width: 95%;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  font-family: 'PT-Regular';
+}
+
+.avatar{
+  width: 60px;
+  height: 60px;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.comment-image{
+  width: 100%;
+  height: 100%;
+}
+
+.comment-content{
+  margin-top: 10px;
+  width:70%;
+  text-align: justify;
+}
+
+.user{
+  font-family: 'PT-Bold','Arial';
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.comment-date{
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+}
+
+.content{
+  margin-bottom: 10px;
+}
+
+.point-box{
+  display: flex;
+  flex-direction: row;
+  width: 120px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upvote{
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #33B95A;
+}
+
+.downvote{
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #635C53;
+}
+
+.upvote:hover{
+  color: white;
+  background-color: #33B95A;
+  transition: all 0.5s ease;
+}
+
+.downvote:hover{
+  color: white;
+  background-color: #635C53;
+  transition: all 0.5s ease;
+}
+
+.vote-box{
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DDDDDD;
+}
+
+.vote-box.upVoteDone{
+  color: white;
+  background-color: #33B95A;
+}
+
+/* new component comment form */
+
+.comment-box{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.comment-box p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #FF5F2D
+}
+
+.input-box{
+  height: 30px;
+  margin-top: 5px;
+  width: 40%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.text-area{
+  margin-top: 5px;
+  height: 100px;
+  width: 80%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.button-box{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+button{
+  width: 70px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: var(--light-grey);
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: var(--black);
+  color: white;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+
+@media screen and (max-width: 1000px) {
+  body.home{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  
+  .homeSection{
+    margin-left: 2%;
+    margin-top: 2%;
+    width:100vw;
+    border-right: 0;
+    border-bottom: 2px solid var(--light-grey);
+    padding-bottom: 10px;
+  }
+  
+  .asideSection{
+    margin-top: 2%;
+    width:95vw;
+  }
+
+  .section-title{
+    margin-top: 20px;
+  }
+  
+  .title-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .horizontal-line{
+    border-top: 0;
+    margin-top: 1%;
+    width: 0vw;
+  }
+
+  .replies-container{
+    margin-left: 5%;
+    margin-top: 20px;
+  }
+}
